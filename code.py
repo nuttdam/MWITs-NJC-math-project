@@ -87,17 +87,17 @@ timer = 0
 node_counter = 0
 steps = 50 # this is the number of steps until program terminates
 while(timer < steps):
-    '''
-	print("-----")
+    '''	
+    print("-----")
     file.write("-----\n")
     print("step: " + str(timer))
     file.write("step: "+str(timer)+"\n")
-	'''
+    '''
     node_counter = node_counter + n(timer)
-	'''
+    '''
     print("node_counter: " + str(node_counter))
     file.write("node_counter: " + str(node_counter) +"\n")
-	'''
+    '''
     update_state()
     betweenness(g=g,vprop=v_betweenness)
     sum_betweenness = 0
