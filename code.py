@@ -91,7 +91,6 @@ while(timer < steps):
     file.write("-----\n")
     print("step: " + str(timer))
     file.write("step: "+str(timer)+"\n")
-    #print(n(timer))
     node_counter = node_counter + n(timer)
 	print("node_counter: " + str(node_counter))
 	file.write("node_counter: " + str(node_counter) +"\n")
