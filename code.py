@@ -92,8 +92,8 @@ while(timer < steps):
     print("step: " + str(timer))
     file.write("step: "+str(timer)+"\n")
     node_counter = node_counter + n(timer)
-	print("node_counter: " + str(node_counter))
-	file.write("node_counter: " + str(node_counter) +"\n")
+    print("node_counter: " + str(node_counter))
+    file.write("node_counter: " + str(node_counter) +"\n")
     update_state()
     betweenness(g=g,vprop=v_betweenness)
     sum_betweenness = 0
