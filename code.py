@@ -87,13 +87,8 @@ timer = 0
 node_counter = 0
 steps = 50 # this is the number of steps until program terminates
 while(timer < steps):
-<<<<<<< HEAD
     '''
 	print("-----")
-=======
-    print("-----")
-    file = open("betweenness1.txt","w")
->>>>>>> origin/master
     file.write("-----\n")
     print("step: " + str(timer))
     file.write("step: "+str(timer)+"\n")
@@ -113,12 +108,8 @@ while(timer < steps):
     print(str(timer) + ": " + str(sum_betweenness))
     file.write(str(timer) + ": " + str(sum_betweenness) + "::\n\n")
     timer += 1
-<<<<<<< HEAD
 	
 file.close()
-=======
-    file.close()
->>>>>>> origin/master
 
 # uncomment line below to draw final graph
 #graph_draw (g, output_size=(10000, 10000),output="a.png")
