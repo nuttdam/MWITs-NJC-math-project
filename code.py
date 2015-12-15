@@ -88,7 +88,7 @@ node_counter = 0
 steps = 50 # this is the number of steps until program terminates
 while(timer < steps):
     print("-----")
-	file = open("betweenness1.txt","w")
+    file = open("betweenness1.txt","w")
     file.write("-----\n")
     print("step: " + str(timer))
     file.write("step: "+str(timer)+"\n")
@@ -105,7 +105,7 @@ while(timer < steps):
     print("betweenness centrality= " + str(sum_betweenness))
     file.write("betweenness centrality= " + str(sum_betweenness) + "\n")
     timer += 1
-	file.close()
+    file.close()
 
 # uncomment line below to draw final graph
 #graph_draw (g, output_size=(10000, 10000),output="a.png")
