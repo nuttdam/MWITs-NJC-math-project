@@ -14,7 +14,7 @@ divideby = 1000
 
 # model parameters for linkedin
 def n(t):
-    return math.floor(max(3900*(t**2) + 760000*t - 130000, 0)/divideby) # to avoid negative values and divide by assugned value above
+    return math.floor(max(3900*(t**2) + 76000*t - 130000, 0)/divideby) # to avoid negative values and divide by assugned value above
 
 a = 0.78
 b = 0.00036
@@ -108,8 +108,8 @@ while(timer < steps):
         sum_betweenness += v_betweenness.a[v]
     if(node_counter != 0):
         sum_betweenness /= node_counter
-    print(str(timer) + ": " + str(sum_betweenness) + " node:" + str(node_counter))
-    file.write(str(timer) + ": " + str(sum_betweenness) + " node: " + str(node_counter) + "::\n\n")
+    print(str(timer) + ": " + str(sum_betweenness) + " node: " + str(node_counter))
+    file.write(str(timer) + ": " + str(sum_betweenness) + " node: " + str(node_counter) + "::\n")
     timer += 1
 	
 file.close()
