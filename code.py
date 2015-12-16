@@ -1,5 +1,6 @@
 from graph_tool.all import *
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 import sys,csv
 g = Graph(directed=False)
@@ -9,9 +10,11 @@ v_age = g.new_vertex_property("int")
 v_lifetime = g.new_vertex_property("int")
 v_betweenness = g.new_vertex_property("double")
 
+divideby = 1000
+
 # model parameters for linkedin
 def n(t):
-    return max(39*(t**2) + 760*t - 1300, 0) # to avoid negative values and devide by 100
+    return math.floor(max(3900*(t**2) + 760000*t - 130000, 0)/divideby) # to avoid negative values and divide by assugned value above
 
 a = 0.78
 b = 0.00036
@@ -105,8 +108,8 @@ while(timer < steps):
         sum_betweenness += v_betweenness.a[v]
     if(node_counter != 0):
         sum_betweenness /= node_counter
-    print(str(timer) + ": " + str(sum_betweenness))
-    file.write(str(timer) + ": " + str(sum_betweenness) + "::\n\n")
+    print(str(timer) + ": " + str(sum_betweenness) + " node:" + str(node_counter))
+    file.write(str(timer) + ": " + str(sum_betweenness) + " node: " + str(node_counter) + "::\n\n")
     timer += 1
 	
 file.close()
