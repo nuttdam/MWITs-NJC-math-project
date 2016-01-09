@@ -12,13 +12,13 @@ v_betweenness = g.new_vertex_property("double")
 
 divideby = 1000
 
-# model parameters for linkedin
+# model parameters for ANSWERS
 def n(t):
-    return math.floor(max(3900*(t**2) + 76000*t - 130000, 0)/divideby) # to avoid negative values and divide by assugned value above
+    return math.floor(max((-284)*(t**2) + 40000*t - 2500, 0)/divideby) # to avoid negative values and divide by assugned value above
 
-a = 0.78
-b = 0.00036
-l = 0.0018
+a = 0.85
+b = 0.0038
+l = 0.019
 tau = 0.7 # for selecting first node to add
 
 # model functions
