@@ -14,11 +14,11 @@ divideby = 1000
 
 # model parameters for ANSWERS
 def n(t):
-    return math.floor(max((-284)*(t**2) + 40000*t - 2500, 0)/divideby) # to avoid negative values and divide by assugned value above
+    return math.floor(max((16)*(t**2) + 3000*t - 40000, 0)/divideby) # to avoid negative values and divide by assugned value above
 
-a = 0.85
-b = 0.0038
-l = 0.019
+a = 0.92
+b = 0.00032
+l = 0.0052
 tau = 0.7 # for selecting first node to add
 
 # model functions
